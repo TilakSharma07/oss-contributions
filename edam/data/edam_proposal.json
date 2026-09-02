@@ -1,0 +1,50 @@
+[
+ {
+  "ext": "bed",
+  "uri": "http://edamontology.org/format_3003",
+  "label": "BED",
+  "n": 6,
+  "total": 6,
+  "label_matches": true
+ },
+ {
+  "ext": "bam",
+  "uri": "http://edamontology.org/format_2572",
+  "label": "BAM",
+  "n": 5,
+  "total": 5,
+  "label_matches": true
+ },
+ {
+  "ext": "fasta",
+  "uri": "http://edamontology.org/format_1929",
+  "label": "FASTA",
+  "n": 5,
+  "total": 5,
+  "label_matches": true
+ },
+ {
+  "ext": "bcf",
+  "uri": "http://edamontology.org/format_3020",
+  "label": "BCF",
+  "n": 4,
+  "total": 4,
+  "label_matches": true
+ },
+ {
+  "ext": "txt",
+  "uri": "http://edamontology.org/format_2330",
+  "label": "Textual format",
+  "n": 3,
+  "total": 3,
+  "label_matches": false
+ },
+ {
+  "ext": "gtf",
+  "uri": "http://edamontology.org/format_2306",
+  "label": "GTF",
+  "n": 2,
+  "total": 2,
+  "label_matches": true
+ }
+]

@@ -1,0 +1,154 @@
+{
+ "gz": {
+  "http://edamontology.org/format_3989": 81,
+  "http://edamontology.org/format_1930": 10,
+  "http://edamontology.org/format_1929": 2,
+  "http://edamontology.org/format_3016": 4,
+  "http://edamontology.org/format_2306": 1,
+  "http://edamontology.org/format_3020": 2
+ },
+ "tsv": {
+  "http://edamontology.org/format_3475": 29
+ },
+ "r": {
+  "http://edamontology.org/format_3999": 4
+ },
+ "json": {
+  "http://edamontology.org/format_3464": 7
+ },
+ "tab": {
+  "http://edamontology.org/format_3475": 9
+ },
+ "gz]": {
+  "http://edamontology.org/format_1930": 1
+ },
+ "bam,cram,sam": {
+  "http://edamontology.org/format_2572": 5,
+  "http://edamontology.org/format_2573": 3,
+  "http://edamontology.org/format_3462": 3
+ },
+ "bai": {
+  "http://edamontology.org/format_2572": 1,
+  "http://edamontology.org/format_2573": 1,
+  "http://edamontology.org/format_3462": 1,
+  "http://edamontology.org/format_3327": 1
+ },
+ "bam": {
+  "http://edamontology.org/format_2572": 5
+ },
+ "gtf|gff": {
+  "http://edamontology.org/format_2306": 1,
+  "http://edamontology.org/format_1975": 1
+ },
+ "gtf": {
+  "http://edamontology.org/format_2306": 2
+ },
+ "yml": {
+  "http://edamontology.org/format_3750": 8
+ },
+ "bai,crai,sai": {
+  "http://edamontology.org/format_3327": 2
+ },
+ "fasta": {
+  "http://edamontology.org/format_1929": 5
+ },
+ "csv,tsv": {
+  "http://edamontology.org/format_3752": 3,
+  "http://edamontology.org/format_3475": 3
+ },
+ "tbi,csi": {
+  "http://edamontology.org/format_3616": 2
+ },
+ "bed,txt,tsv": {
+  "http://edamontology.org/format_3475": 1,
+  "http://edamontology.org/format_3003": 1
+ },
+ "bam,cram": {
+  "http://edamontology.org/format_2572": 3,
+  "http://edamontology.org/format_3462": 3
+ },
+ "bai,crai": {
+  "http://edamontology.org/format_3327": 5
+ },
+ "fa,fasta": {
+  "http://edamontology.org/format_1929": 1
+ },
+ "bed": {
+  "http://edamontology.org/format_3003": 6
+ },
+ "pdf": {
+  "http://edamontology.org/format_3508": 1
+ },
+ "png": {
+  "http://edamontology.org/format_3603": 1
+ },
+ "fai": {
+  "http://edamontology.org/format_3327": 1,
+  "http://edamontology.org/data_3210": 1,
+  "http://edamontology.org/format_3326": 1
+ },
+ "txt": {
+  "http://edamontology.org/format_2330": 3
+ },
+ "bcf": {
+  "http://edamontology.org/format_3020": 4
+ },
+ "xz": {
+  "http://edamontology.org/format_3981": 1,
+  "http://edamontology.org/format_3989": 1
+ },
+ "html": {
+  "http://edamontology.org/format_2331": 1
+ },
+ "zip": {
+  "http://edamontology.org/format_3987": 2
+ },
+ "fasta,fastq,fa,fq,fas,fna,faa}*": {
+  "http://edamontology.org/format_1930": 2
+ },
+ "fa,fasta,fna": {
+  "http://edamontology.org/format_1929": 4,
+  "http://edamontology.org/data_2044": 1
+ },
+ "sylphmpa": {
+  "http://edamontology.org/format_3475": 1
+ },
+ "csv": {
+  "http://edamontology.org/format_3752": 2
+ },
+ "64,pac": {
+  "http://edamontology.org/data_3210": 1
+ },
+ "sam": {
+  "http://edamontology.org/format_2573": 2,
+  "http://edamontology.org/format_2571": 1
+ },
+ "cram": {
+  "http://edamontology.org/format_3462": 3,
+  "http://edamontology.org/format_2573": 1
+ },
+ "log": {
+  "http://edamontology.org/format_3888": 1
+ },
+ "gz,bam": {
+  "http://edamontology.org/format_3989": 1,
+  "http://edamontology.org/format_2572": 1
+ },
+ "amb,ann,bwt,pac,sa": {
+  "http://edamontology.org/data_3210": 1
+ },
+ "fasta,fa": {
+  "http://edamontology.org/data_2044": 1,
+  "http://edamontology.org/format_1929": 2
+ },
+ "yml,yaml": {
+  "http://edamontology.org/format_3750": 2
+ },
+ "yaml": {
+  "http://edamontology.org/format_3750": 3
+ },
+ "gz,bcf": {
+  "http://edamontology.org/format_3016": 1,
+  "http://edamontology.org/format_2572": 1
+ }
+}

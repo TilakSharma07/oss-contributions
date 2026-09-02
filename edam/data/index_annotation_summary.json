@@ -1,0 +1,32 @@
+{
+ "fai": {
+  "total": 51,
+  "distinct_terms": 3,
+  "unannotated": 48
+ },
+ "crai": {
+  "total": 33,
+  "distinct_terms": 1,
+  "unannotated": 28
+ },
+ "csi": {
+  "total": 23,
+  "distinct_terms": 1,
+  "unannotated": 21
+ },
+ "tbi": {
+  "total": 74,
+  "distinct_terms": 0,
+  "unannotated": 74
+ },
+ "bai": {
+  "total": 32,
+  "distinct_terms": 2,
+  "unannotated": 30
+ },
+ "dict": {
+  "total": 18,
+  "distinct_terms": 0,
+  "unannotated": 18
+ }
+}

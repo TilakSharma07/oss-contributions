@@ -1,23 +1,29 @@
-# Upstream contributions: nf-core/tools and Galaxy training-material
+# Upstream contributions: nf-core/tools, Galaxy training-material, EDAM
 
-Two defects found by auditing the tooling that annotates bioinformatics workflow
-metadata, each with a measurement over the real corpus, a proposed fix, and a test
-suite. Both were found by reading the tools' own source and then quantifying the
-consequence — not by running the linters and reading their output, which is exactly
-what neither defect produces.
+Three findings from auditing the tooling that annotates bioinformatics workflow
+metadata, each with a measurement over the real corpus and a proposed fix. All three
+were found by reading the tools' own source and then quantifying the consequence —
+not by running the linters and reading their output, which is exactly what none of
+these defects produces.
 
-| | nf-core/tools | Galaxy training-material |
-|---|---|---|
-| Component | `modules_utils.py::load_edam()` | `bin/lint.rb::check_pmids` |
-| Symptom | `ontologies: []` written where a term exists | GTN:004 never fires |
-| Corpus measured | 1,893 channel elements, 184 modules | 547 tutorials, 35 topics |
-| Affected | 513 elements recoverable | 50 links missed, 23 tutorials |
-| Tests | 12 passing (pytest) | 16 passing (ruby) |
+The three are one causal chain. EDAM records a file extension for a tenth of its
+format concepts; nf-core's linter reads only that property, so it annotates almost
+nothing; and the Galaxy finding is the same shape of defect — a check that runs
+clean because it can never fire, not because the corpus is clean.
 
-## 1. nf-core/tools — EDAM ontology map covers 67 of 728 format concepts
+| | nf-core/tools | Galaxy training-material | EDAM |
+|---|---|---|---|
+| Component | `modules_utils.py::load_edam()` | `bin/lint.rb::check_pmids` | `file_extension` property |
+| Symptom | `ontologies: []` written where a term exists | GTN:004 never fires | 61 of 612 concepts populated |
+| Corpus measured | 1,893 channel elements, 184 modules | 547 tutorials, 35 topics | 612 non-obsolete format concepts |
+| Affected | 513 elements recoverable | 50 links missed, 23 tutorials | 219 of 231 index elements unannotated |
+| Deliverable | patch + 12 tests (pytest) | patch + 16 tests (ruby) | 6 evidenced values + 3 concept gaps |
+
+## 1. nf-core/tools — the EDAM extension map reaches 61 of 612 live format concepts
 
 `load_edam()` builds its extension map from EDAM.tsv column 14, "File extension".
-EDAM 1.25 fills that column for **61 of 728** `format_*` concepts, so BAM
+EDAM 1.25 fills that column for **61 of 612** non-obsolete `format_*` concepts
+(728 including obsolete ones), so BAM
 (`format_2572`), FASTA (`format_1929`), VCF (`format_3016`), BED (`format_3003`) and
 CRAM (`format_3462`) are absent — the formats nf-core modules mostly emit.
 
@@ -87,6 +93,45 @@ galaxy-training-material/
   data/pmid_findings.json     per-tutorial counts
 ```
 
+## 3. EDAM — file_extension is populated for 61 of 612 format concepts
+
+Finding 1 traced back to its cause. The `file_extension` property that nf-core reads
+is populated for **61** of the **612** non-obsolete `format_*` concepts in EDAM 1.25.
+The tool is reading the right property; the property is empty.
+
+The values proposed to EDAM are not asserted from knowledge — they are taken from
+what nf-core module authors independently wrote by hand, restricted to the 184
+channel elements pairing exactly one extension with exactly one term (multi-extension
+globs cannot attribute a term to an extension, so they are excluded). The method
+validates against EDAM itself: for the nine extensions EDAM already records, author
+consensus agrees with EDAM's own curation in every case.
+
+| extension | concept | label | annotations agreeing |
+|---|---|---|---|
+| `bed` | `format_3003` | BED | 6/6 |
+| `bam` | `format_2572` | BAM | 5/5 |
+| `fasta` | `format_1929` | FASTA | 5/5 |
+| `bcf` | `format_3020` | BCF | 4/4 |
+| `txt` | `format_2330` | Textual format | 3/3 |
+| `gtf` | `format_2306` | GTF | 2/2 |
+
+Where authors disagreed, the disagreement tracks a gap in the ontology rather than
+carelessness. `.tbi` appears on 74 channel elements and **none** is annotated — EDAM
+carries two non-obsolete concepts for the tabix index (`format_3616` and
+`format_3700`) with different parents, and a consumer cannot choose. `.fai` appears
+on 51 elements annotated three different ways, because there is no FASTA-index
+concept at all; in `nf-core/modules@master`, `freebayes/meta.yml` labels one
+`# FASTA index` while pointing at `format_3327`, which is the BAM index. `.crai`
+(33), `.csi` (23) and `.dict` (18) have nowhere to point either.
+
+```
+edam/
+  ISSUE.md                        the report as filed
+  edam_extension_coverage.py      reproduces every count in the issue
+  evidence_from_modules.py        extracts the evidence table from meta.yml files
+  data/                           curated pairs, proposals, index summary
+```
+
 ## Reproducing
 
 ```bash
@@ -100,6 +145,10 @@ mv EDAM_1.25.tsv EDAM.tsv
 # galaxy
 ruby test_check_pmids.rb
 python measure_pmid.py          # re-fetches the corpus
+
+# edam
+python edam_extension_coverage.py EDAM_1.25.tsv
+python evidence_from_modules.py <dir-of-nf-core-meta.yml>
 ```
 
 ## Scope left open deliberately
@@ -109,6 +158,11 @@ python measure_pmid.py          # re-fetches the corpus
   and deliberately left unfilled: the registry was unreachable during the audit, and
   writing identifiers without verifying them against it would put unverified metadata
   upstream.
-* `*.` (370 occurrences — a wildcard carrying no extension) and index-file suffixes
-  (`tbi`, `fai`, `crai`, `csi`) remain unmapped. Whether an index file should carry the
-  format of the file it indexes is a design question for the maintainers, not a bug.
+* `*.` (370 occurrences) is a wildcard carrying no extension at all. Nothing can map
+  it; the pattern would have to change in the module for annotation to be possible.
+
+Index-file suffixes were initially set aside here as "a design question for the
+maintainers". That turned out to be wrong, and chasing it produced the EDAM finding
+above: `.tbi`, `.fai`, `.crai`, `.csi` and `.dict` are unmapped because EDAM has no
+concept for most of them and two competing concepts for the one it does cover. See
+`edam/ISSUE.md`.
