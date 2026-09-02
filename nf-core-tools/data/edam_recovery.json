@@ -1,0 +1,320 @@
+{
+ "current_keys": 67,
+ "proposed_keys": 798,
+ "ambiguous_rejected": {
+  "pir": [
+   [
+    "http://edamontology.org/format_1948",
+    "nbrf/pir"
+   ],
+   [
+    "http://edamontology.org/format_1976",
+    "pir"
+   ]
+  ],
+  "bioyaml": [
+   [
+    "http://edamontology.org/format_2352",
+    "BioXSD (XML)"
+   ],
+   [
+    "http://edamontology.org/format_3773",
+    "BioYAML"
+   ]
+  ],
+  "gtrack": [
+   [
+    "http://edamontology.org/format_2352",
+    "BioXSD (XML)"
+   ],
+   [
+    "http://edamontology.org/format_3164",
+    "GTrack"
+   ],
+   [
+    "http://edamontology.org/format_3775",
+    "GSuite"
+   ],
+   [
+    "http://edamontology.org/format_3776",
+    "BTrack"
+   ]
+  ],
+  "biojson": [
+   [
+    "http://edamontology.org/format_2352",
+    "BioXSD (XML)"
+   ],
+   [
+    "http://edamontology.org/format_3772",
+    "BioJSON (BioXSD)"
+   ],
+   [
+    "http://edamontology.org/format_3773",
+    "BioYAML"
+   ]
+  ],
+  "bioxsd": [
+   [
+    "http://edamontology.org/format_2352",
+    "BioXSD (XML)"
+   ],
+   [
+    "http://edamontology.org/format_3164",
+    "GTrack"
+   ],
+   [
+    "http://edamontology.org/format_3772",
+    "BioJSON (BioXSD)"
+   ],
+   [
+    "http://edamontology.org/format_3773",
+    "BioYAML"
+   ],
+   [
+    "http://edamontology.org/format_3775",
+    "GSuite"
+   ],
+   [
+    "http://edamontology.org/format_3776",
+    "BTrack"
+   ]
+  ],
+  "btrack": [
+   [
+    "http://edamontology.org/format_3164",
+    "GTrack"
+   ],
+   [
+    "http://edamontology.org/format_3775",
+    "GSuite"
+   ],
+   [
+    "http://edamontology.org/format_3776",
+    "BTrack"
+   ]
+  ],
+  "gsuite": [
+   [
+    "http://edamontology.org/format_3164",
+    "GTrack"
+   ],
+   [
+    "http://edamontology.org/format_3775",
+    "GSuite"
+   ],
+   [
+    "http://edamontology.org/format_3776",
+    "BTrack"
+   ]
+  ]
+ },
+ "recovered_elements": 513,
+ "recovered_extensions": {
+  "bam": 108,
+  "fasta": 64,
+  "txt": 57,
+  "bai": 56,
+  "cram": 49,
+  "bed": 33,
+  "vcf": 32,
+  "sam": 31,
+  "gtf": 20,
+  "xls": 15,
+  "pdf": 11,
+  "bcf": 7,
+  "png": 5,
+  "html": 5,
+  "bedgraph": 3,
+  "wig": 3,
+  "pileup": 2,
+  "r": 2,
+  "ebwt": 1,
+  "gff": 1,
+  "gff3": 1,
+  "bedGraph": 1,
+  "bigWig": 1,
+  "qual": 1,
+  "FORMAT": 1,
+  "PL": 1,
+  "ped": 1,
+  "map": 1
+ },
+ "still_unmapped": {
+  "*.": 370,
+  "tbi": 63,
+  "fai": 42,
+  "fa": 40,
+  "crai": 38,
+  "vcf.gz": 35,
+  "csi": 21,
+  "dict": 18,
+  "table": 16,
+  "log": 15,
+  "vcf.gz.tbi": 13,
+  "$": 12,
+  "recal": 12,
+  "prefix": 11,
+  "sai": 10,
+  "*": 9,
+  "out": 9,
+  "interval_list": 8,
+  "fna": 7,
+  "*_": 6,
+  "results": 6,
+  "idx": 6,
+  "fasta.fai": 6,
+  "ld": 6,
+  "bcf.gz": 5,
+  "cns": 5,
+  "cpn": 5,
+  "fastq.gz": 5,
+  "bed.tbi": 5,
+  "fa.fai": 5,
+  "list": 5,
+  "cnn": 4,
+  "gzi": 4,
+  "tranches": 4,
+  "stats": 4,
+  "sites": 4,
+  "metrics.txt": 3,
+  "metrics": 3,
+  "bam.bai": 3,
+  "ini": 3,
+  "conf": 3,
+  "config": 3,
+  "amb": 3,
+  "ann": 3,
+  "bwt": 3,
+  "pac": 3,
+  "sa": 3,
+  "junction": 3,
+  "bg": 3,
+  "summary": 3,
+  "indv": 3,
+  "stats.txt": 2,
+  "merged.fastq.gz": 2,
+  "cnr": 2,
+  ".gz": 2,
+  "fas": 2,
+  "cram.crai": 2,
+  ".": 2,
+  ".bam": 2,
+  "ht2": 2,
+  "picard": 2,
+  "intervals": 2,
+  "stat": 2,
+  "1": 2,
+  "2": 2,
+  ".bai": 2,
+  ".crai": 2,
+  "sizes": 2,
+  "*.unselected.": 2,
+  "model": 2,
+  "count": 2,
+  "pi": 2,
+  "files": 2,
+  "alleleFrequencies_chr*.txt": 1,
+  "purityploidy.txt": 1,
+  "segments.txt": 1,
+  "*.mpileup.gz": 1,
+  "bam|bed|gff|vcf": 1,
+  "*.$": 1,
+  "extension": 1,
+  "*.vcf": 1,
+  "_CNVs": 1,
+  "gem": 1,
+  "BAF": 1,
+  "*.vcf.gz.": 1,
+  "*.g.vcf.gz.": 1,
+  "Directory containing DRAGMAP hash table *.": 1,
+  "cmp": 1,
+  ".bin": 1,
+  ".txt": 1,
+  "fastqc.html": 1,
+  "fastqc.zip": 1,
+  "file_out": 1,
+  "*.fastq": 1,
+  "hd5": 1,
+  "fasta.gz": 1,
+  "fasta.fai.gz": 1,
+  ".vcf.gz.tbi": 1,
+  ".vcf.gz.stats": 1,
+  "*bai": 1,
+  ".cram": 1,
+  " gtf": 1,
+  "faa": 1,
+  "fsa": 1,
+  "report.txt": 1,
+  "global.dist.txt": 1,
+  "summary.txt": 1,
+  "region.dist.txt": 1,
+  "per-base.d4": 1,
+  "per-base.bed.gz": 1,
+  "per-base.bed.gz.csi": 1,
+  "regions.bed.gz": 1,
+  "regions.bed.gz.csi": 1,
+  "quantized.bed.gz": 1,
+  "quantized.bed.gz.csi": 1,
+  "thresholds.bed.gz": 1,
+  "thresholds.bed.gz.csi": 1,
+  "lc_extrap.txt": 1,
+  "/dupradar/*": 1,
+  "/featurecounts/*": 1,
+  "/preseq/*": 1,
+  "/samtools/*": 1,
+  "/rseqc/**": 1,
+  "/qualimap/**": 1,
+  ".fq.gz": 1,
+  ".fastq.gz": 1,
+  "flagstat": 1,
+  "idxstats": 1,
+  "mpileup": 1,
+  ".fai": 1,
+  ".csi": 1,
+  "score": 1,
+  "spring": 1,
+  "ctab": 1,
+  "saf": 1,
+  "rds": 1,
+  "syldb": 1,
+  "sylsp": 1,
+  "Directory containing BWA index *.": 1,
+  "ploidies.tab": 1,
+  "UMICollapse.log": 1,
+  "frq": 1,
+  "idepth": 1,
+  "ildepth": 1,
+  "mean": 1,
+  "gdepth": 1,
+  "chisq": 1,
+  "TsTv": 1,
+  "fst": 1,
+  "het": 1,
+  "hwe": 1,
+  "D": 1,
+  "ifreqburden": 1,
+  "LROH": 1,
+  "relatedness": 1,
+  "relatedness2": 1,
+  "lqual": 1,
+  "imiss": 1,
+  "lmiss": 1,
+  "snpden": 1,
+  "singeltons": 1,
+  "indel_hist": 1,
+  "hapcount": 1,
+  "mendel": 1,
+  "INFO": 1,
+  "012": 1,
+  "pos": 1,
+  "hap": 1,
+  "legend": 1,
+  "locs": 1,
+  "GL": 1,
+  "tped": 1,
+  "tfam": 1,
+  "matrix": 1,
+  "switch": 1
+ }
+}

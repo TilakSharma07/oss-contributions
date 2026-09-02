@@ -1,0 +1,41 @@
+Fix GTN:004 PMID check: regex has a doubled slash so it never matches
+
+bin/lint.rb::check_pmids matches `.../pubmed//[0-9]*` -- two slashes -- while the
+documenting comment directly above it gives the real URL shape with one:
+
+    # https://www.ncbi.nlm.nih.gov/pubmed/24678044
+
+Real PubMed links therefore never match, and GTN:004 has never fired for a PMID
+link. Its companion check_dois is unaffected.
+
+Measured over the 547 tutorial.md files reachable from the topic API: 47 links of the
+form https://www.ncbi.nlm.nih.gov/pubmed/<id> and 3 on the modern host
+https://pubmed.ncbi.nlm.nih.gov/<id>/ are present across 23 tutorials, and the shipped
+regex matches 0 of them.
+
+Two changes:
+  * drop the duplicated slash, require at least one digit, allow the trailing slash
+    PubMed itself emits;
+  * also match the modern pubmed.ncbi.nlm.nih.gov host, which the check predates.
+
+--- a/bin/lint.rb
++++ b/bin/lint.rb
+@@ -275,11 +275,14 @@
+     ##
+     # GTN:004 - Instead of linking directly to a PMID URL and citing it yourself, consider obtaining the BibTeX formatted citation and adding it to a tutorial.bib (or slides.bib) file. Then we can generate a full set of references for the citations and give proper credit.
+     #
+     # Companion function to Gtn::Linter.check_dois
+     def self.check_pmids(contents)
+       # https://www.ncbi.nlm.nih.gov/pubmed/24678044
+-      find_matching_texts(contents,
+-                          %r{(\[[^\]]*\]\(https?://www.ncbi.nlm.nih.gov/pubmed//[0-9]*\))}).map do |idx, _text, selected|
++      # https://pubmed.ncbi.nlm.nih.gov/24678044/
++      find_matching_texts(
++        contents,
++        %r{(\[[^\]]*\]\(https?://(?:www\.ncbi\.nlm\.nih\.gov/pubmed|pubmed\.ncbi\.nlm\.nih\.gov)/[0-9]+/?\))}
++      ).map do |idx, _text, selected|
+         ReviewDogEmitter.warning(
+           path: @path,
+           idx: idx,
+           match_start: selected.begin(0),
+           match_end: selected.end(0) + 2,

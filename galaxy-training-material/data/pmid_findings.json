@@ -1,0 +1,186 @@
+[
+ {
+  "topic": "assembly",
+  "tutorial": "unicycler-assembly",
+  "shipped_matches": 0,
+  "intended_matches": 2,
+  "modern_host_matches": 0,
+  "doi_links": 0
+ },
+ {
+  "topic": "ecology",
+  "tutorial": "ref-based-rad-seq",
+  "shipped_matches": 0,
+  "intended_matches": 1,
+  "modern_host_matches": 0,
+  "doi_links": 0
+ },
+ {
+  "topic": "epigenetics",
+  "tutorial": "estrogen-receptor-binding-site-identification",
+  "shipped_matches": 0,
+  "intended_matches": 1,
+  "modern_host_matches": 0,
+  "doi_links": 1
+ },
+ {
+  "topic": "introduction",
+  "tutorial": "galaxy-intro-ngs-data-managment",
+  "shipped_matches": 0,
+  "intended_matches": 0,
+  "modern_host_matches": 1,
+  "doi_links": 0
+ },
+ {
+  "topic": "introduction",
+  "tutorial": "galaxy-intro-peaks2genes",
+  "shipped_matches": 0,
+  "intended_matches": 1,
+  "modern_host_matches": 0,
+  "doi_links": 0
+ },
+ {
+  "topic": "introduction",
+  "tutorial": "vsi_qc",
+  "shipped_matches": 0,
+  "intended_matches": 2,
+  "modern_host_matches": 0,
+  "doi_links": 0
+ },
+ {
+  "topic": "microbiome",
+  "tutorial": "general-tutorial",
+  "shipped_matches": 0,
+  "intended_matches": 1,
+  "modern_host_matches": 0,
+  "doi_links": 0
+ },
+ {
+  "topic": "microbiome",
+  "tutorial": "pathogen-detection-from-nanopore-foodborne-data",
+  "shipped_matches": 0,
+  "intended_matches": 0,
+  "modern_host_matches": 1,
+  "doi_links": 0
+ },
+ {
+  "topic": "proteomics",
+  "tutorial": "database-handling",
+  "shipped_matches": 0,
+  "intended_matches": 1,
+  "modern_host_matches": 0,
+  "doi_links": 0
+ },
+ {
+  "topic": "proteomics",
+  "tutorial": "labelfree-vs-labelled",
+  "shipped_matches": 0,
+  "intended_matches": 3,
+  "modern_host_matches": 0,
+  "doi_links": 0
+ },
+ {
+  "topic": "proteomics",
+  "tutorial": "metaproteomics",
+  "shipped_matches": 0,
+  "intended_matches": 5,
+  "modern_host_matches": 0,
+  "doi_links": 1
+ },
+ {
+  "topic": "proteomics",
+  "tutorial": "metaquantome-data-creation",
+  "shipped_matches": 0,
+  "intended_matches": 1,
+  "modern_host_matches": 0,
+  "doi_links": 0
+ },
+ {
+  "topic": "proteomics",
+  "tutorial": "ntails",
+  "shipped_matches": 0,
+  "intended_matches": 2,
+  "modern_host_matches": 0,
+  "doi_links": 0
+ },
+ {
+  "topic": "proteomics",
+  "tutorial": "protein-id-oms",
+  "shipped_matches": 0,
+  "intended_matches": 11,
+  "modern_host_matches": 0,
+  "doi_links": 0
+ },
+ {
+  "topic": "proteomics",
+  "tutorial": "protein-id-sg-ps",
+  "shipped_matches": 0,
+  "intended_matches": 4,
+  "modern_host_matches": 0,
+  "doi_links": 0
+ },
+ {
+  "topic": "proteomics",
+  "tutorial": "protein-quant-sil",
+  "shipped_matches": 0,
+  "intended_matches": 2,
+  "modern_host_matches": 0,
+  "doi_links": 1
+ },
+ {
+  "topic": "proteomics",
+  "tutorial": "secretome-prediction",
+  "shipped_matches": 0,
+  "intended_matches": 1,
+  "modern_host_matches": 0,
+  "doi_links": 1
+ },
+ {
+  "topic": "single-cell",
+  "tutorial": "scrna-ncbi-anndata",
+  "shipped_matches": 0,
+  "intended_matches": 0,
+  "modern_host_matches": 1,
+  "doi_links": 0
+ },
+ {
+  "topic": "transcriptomics",
+  "tutorial": "rna-seq-genes-to-pathways",
+  "shipped_matches": 0,
+  "intended_matches": 3,
+  "modern_host_matches": 0,
+  "doi_links": 0
+ },
+ {
+  "topic": "transcriptomics",
+  "tutorial": "rna-seq-viz-with-heatmap2",
+  "shipped_matches": 0,
+  "intended_matches": 1,
+  "modern_host_matches": 0,
+  "doi_links": 0
+ },
+ {
+  "topic": "transcriptomics",
+  "tutorial": "srna",
+  "shipped_matches": 0,
+  "intended_matches": 1,
+  "modern_host_matches": 0,
+  "doi_links": 1
+ },
+ {
+  "topic": "variant-analysis",
+  "tutorial": "dunovo",
+  "shipped_matches": 0,
+  "intended_matches": 1,
+  "modern_host_matches": 0,
+  "doi_links": 1
+ },
+ {
+  "topic": "variant-analysis",
+  "tutorial": "tb-variant-analysis",
+  "shipped_matches": 0,
+  "intended_matches": 3,
+  "modern_host_matches": 0,
+  "doi_links": 2
+ }
+]

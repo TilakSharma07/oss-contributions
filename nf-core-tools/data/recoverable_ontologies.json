@@ -1,0 +1,32 @@
+[
+ {
+  "module": "custom/multiqccustombiotype",
+  "pattern": "*biotype_counts_mqc.tsv",
+  "extensions": [
+   "tsv"
+  ],
+  "edam": [
+   "http://edamontology.org/format_3475"
+  ]
+ },
+ {
+  "module": "custom/multiqccustombiotype",
+  "pattern": "*biotype_counts_rrna_mqc.tsv",
+  "extensions": [
+   "tsv"
+  ],
+  "edam": [
+   "http://edamontology.org/format_3475"
+  ]
+ },
+ {
+  "module": "ensemblvep/vep",
+  "pattern": "*.gtf.gz",
+  "extensions": [
+   "gz"
+  ],
+  "edam": [
+   "http://edamontology.org/format_3989"
+  ]
+ }
+]
