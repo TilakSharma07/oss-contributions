@@ -1,4 +1,7 @@
-"""Tests for the proposed load_edam(). Run: nfvenv/bin/python -m pytest test_patch.py -q
+"""Tests for the proposed load_edam(). Run: python -m pytest test_load_edam.py -q
+
+Requires nf-core==4.1.0 (the version the finding was measured against) and EDAM.tsv
+in this directory; see the repository README for the two fetch commands.
 
 Checks the two claims made in the patch docstring, plus the properties a reviewer
 would want guarded: no ambiguous term is ever emitted, the curated column wins on
@@ -10,7 +13,7 @@ import sys
 import pytest
 import requests
 
-sys.path.insert(0, str(pathlib.Path(__file__).parent / "patch"))
+sys.path.insert(0, str(pathlib.Path(__file__).parent))
 import load_edam_proposed as proposed          # noqa: E402
 
 import nf_core.modules.modules_utils as upstream  # noqa: E402
