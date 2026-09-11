@@ -166,3 +166,11 @@ maintainers". That turned out to be wrong, and chasing it produced the EDAM find
 above: `.tbi`, `.fai`, `.crai`, `.csi` and `.dict` are unmapped because EDAM has no
 concept for most of them and two competing concepts for the one it does cover. See
 `edam/ISSUE.md`.
+
+## Filed upstream
+
+| finding | upstream issue |
+|---|---|
+| bug | https://github.com/nf-core/tools/issues/4468 |
+| bug | https://github.com/galaxyproject/training-material/issues/7092 |
+| data | https://github.com/edamontology/edamontology/issues/958 |
