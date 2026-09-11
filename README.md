@@ -171,6 +171,6 @@ concept for most of them and two competing concepts for the one it does cover. S
 
 | finding | upstream issue |
 |---|---|
-| bug | https://github.com/nf-core/tools/issues/4468 |
-| bug | https://github.com/galaxyproject/training-material/issues/7092 |
-| data | https://github.com/edamontology/edamontology/issues/958 |
+| `load_edam()` maps 61 of 728 EDAM format concepts, and a failed download is indistinguishable from "no term exists" | [nf-core/tools#4468](https://github.com/nf-core/tools/issues/4468) |
+| GTN:004's PMID regex has a doubled slash, so the check has never fired (0 of 47 links across 23 tutorials) | [galaxyproject/training-material#7092](https://github.com/galaxyproject/training-material/issues/7092) |
+| `file_extension` is populated for 61 of 612 non-obsolete format concepts, and downstream tooling reads only that column | [edamontology/edamontology#958](https://github.com/edamontology/edamontology/issues/958) |
