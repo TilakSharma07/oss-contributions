@@ -1,4 +1,4 @@
-# nf-core/tools: EDAM ontology map covers 67 of 728 format concepts, and a failed download is indistinguishable from "no term exists"
+# nf-core/tools: EDAM ontology map covers 61 of 728 format concepts, and a failed download is indistinguishable from "no term exists"
 
 ## Summary
 
